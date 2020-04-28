@@ -1,0 +1,21 @@
+#spring:
+#  application:
+#    name: employee-consumer
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#          auto-create-topics: true
+#        bindings:
+#          input:
+#            consumer:
+#              enableDlq: true
+#              dlqName: dead-out
+#              autoCommitOnError: true
+#              autoCommitOffset: true
+#      bindings:
+#        input:
+#          group: so51247113
+#          destination: greetings-out
+#          contentType: application/json
